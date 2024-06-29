@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "383906926517",
+    "project_id": "store-using-realtimedatabase",
+    "storage_bucket": "store-using-realtimedatabase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:383906926517:android:d47b8b59043ca427da53fc",
+        "android_client_info": {
+          "package_name": "fpoly.thienhdph47232.storeusingfirebaserealtimedatabase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7IQqkDv1A34Fbj9f99keyZUI7JKxRqVM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

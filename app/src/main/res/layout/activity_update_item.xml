@@ -44,7 +44,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:id="@+id/updateTopic"
+                android:id="@+id/updateTitle"
                 android:hint="Enter Topic Name"
                 android:inputType="textPersonName"
                 android:layout_marginTop="20dp"

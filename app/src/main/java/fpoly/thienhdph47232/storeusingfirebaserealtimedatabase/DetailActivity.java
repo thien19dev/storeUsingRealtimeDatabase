@@ -79,7 +79,13 @@ public class DetailActivity extends AppCompatActivity {
         btnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(DetailActivity.this, Update_Item.class)
+                        .putExtra("Title", detailTitle.getText().toString())
+                        .putExtra("Description", detailDesc.getText().toString())
+                        .putExtra("Language", detailLang.getText().toString())
+                        .putExtra("Image", imageURL)
+                        .putExtra("Key", key);
+                startActivity(intent);
             }
         });
     }

@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CalendarView;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -25,6 +26,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+
+import java.text.DateFormat;
+import java.util.Calendar;
 
 public class UploadActivity extends AppCompatActivity {
 
@@ -115,7 +119,9 @@ public class UploadActivity extends AppCompatActivity {
 
         DataClass dataClass = new DataClass(title, desc, lang, imageURL);
 
-        FirebaseDatabase.getInstance().getReference("Android Tutorials").child(title)
+        String currentDate = DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime());
+
+        FirebaseDatabase.getInstance().getReference("Android Tutorials").child(currentDate)
                 .setValue(dataClass).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {

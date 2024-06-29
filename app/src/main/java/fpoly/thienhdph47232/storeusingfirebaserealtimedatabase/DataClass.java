@@ -2,6 +2,8 @@ package fpoly.thienhdph47232.storeusingfirebaserealtimedatabase;
 
 public class DataClass {
     private String dataTitle, dataDescription, dataLanguage, dataImage;
+    private String key;
+
 
     public DataClass(String dataTitle, String dataDescription, String dataLanguage, String dataImage) {
         this.dataTitle = dataTitle;
@@ -12,6 +14,14 @@ public class DataClass {
 
     public DataClass(){
 
+    }
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
     }
 
     public String getDataTitle() {

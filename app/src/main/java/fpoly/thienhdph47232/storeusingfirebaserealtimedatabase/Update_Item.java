@@ -80,7 +80,6 @@ public class Update_Item extends AppCompatActivity {
             updateLang.setText(bundle.getString("Language"));
             key = bundle.getString("Key");
             oldImageURL = bundle.getString("Image");
-
         }
         databaseReference = FirebaseDatabase.getInstance().getReference("Android Tutorials").child(key);
 

@@ -25,7 +25,8 @@ public class DetailActivity extends AppCompatActivity {
 
     TextView detailDesc, detailTitle, detailLang;
     ImageView detailImage;
-    FloatingActionButton btnDelete, btnEdit;
+    com.github.clans.fab.FloatingActionButton btnDelete, btnEdit ;
+//    FloatingActionButton btnDelete, btnDelete;
 
     String key = "";
     String imageURL = "";
@@ -40,8 +41,9 @@ public class DetailActivity extends AppCompatActivity {
         detailImage = findViewById(R.id.detailImage);
         detailTitle = findViewById(R.id.detailTitle);
         detailLang = findViewById(R.id.detailLang);
-        btnDelete = findViewById(R.id.btnDelete);
-        btnEdit = findViewById(R.id.btnEdit);
+        btnDelete = findViewById(R.id.deleteButton);
+        btnEdit = findViewById(R.id.editButton);
+
 
         Bundle bundle = getIntent().getExtras();
         if (bundle != null){
@@ -49,10 +51,8 @@ public class DetailActivity extends AppCompatActivity {
             detailTitle.setText(bundle.getString("Title"));
             detailLang.setText(bundle.getString("Language"));
             key = bundle.getString("Key");
-            imageURL = bundle.getString("imageURL");
-
+            imageURL = bundle.getString("Image");
             Glide.with(this).load(bundle.getString("Image")).into(detailImage);
-
         }
 
         btnDelete.setOnClickListener(new View.OnClickListener() {

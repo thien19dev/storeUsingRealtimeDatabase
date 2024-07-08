@@ -26,7 +26,7 @@ public class DetailActivity extends AppCompatActivity {
     TextView detailDesc, detailTitle, detailLang;
     ImageView detailImage;
     com.github.clans.fab.FloatingActionButton btnDelete, btnEdit ;
-//    FloatingActionButton btnDelete, btnDelete;
+
 
     String key = "";
     String imageURL = "";
@@ -71,8 +71,6 @@ public class DetailActivity extends AppCompatActivity {
                         finish();
                     }
                 });
-
-
             }
         });
 

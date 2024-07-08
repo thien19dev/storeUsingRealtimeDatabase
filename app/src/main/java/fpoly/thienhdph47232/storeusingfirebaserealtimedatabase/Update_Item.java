@@ -72,6 +72,7 @@ public class Update_Item extends AppCompatActivity {
                     }
                 }
         );
+
         Bundle bundle = getIntent().getExtras();
         if (bundle != null){
             Glide.with(Update_Item.this).load(bundle.getString("Image")).into(updateImage);
@@ -95,7 +96,6 @@ public class Update_Item extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 saveData();
-
                 Intent intent = new Intent(Update_Item.this, MainActivity.class);
                 startActivity(intent);
             }
@@ -139,10 +139,12 @@ public class Update_Item extends AppCompatActivity {
         databaseReference.setValue(dataClass).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
-                StorageReference reference = FirebaseStorage.getInstance().getReferenceFromUrl(oldImageURL);
-                reference.delete();
-                Toast.makeText(Update_Item.this, "Updated!", Toast.LENGTH_SHORT).show();
-                finish();
+                if (task.isSuccessful()){
+                    StorageReference reference = FirebaseStorage.getInstance().getReferenceFromUrl(oldImageURL);
+                    reference.delete();
+                    Toast.makeText(Update_Item.this, "Updated!", Toast.LENGTH_SHORT).show();
+                    finish();
+                }
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override

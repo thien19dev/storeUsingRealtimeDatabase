@@ -50,7 +50,6 @@
                 android:textSize="18dp"
                 android:textColor="@color/lavender"
                 />
-
             <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -61,14 +60,11 @@
             android:id="@+id/detailDesc"
             android:textSize="18dp"
             android:textColor="@color/lavender"
-
             />
-
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 >
-
                 <com.github.clans.fab.FloatingActionMenu
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -98,11 +94,6 @@
                         android:src="@drawable/baseline_edit_document_24" />
                 </com.github.clans.fab.FloatingActionMenu>
             </RelativeLayout>
-
         </LinearLayout>
-
-
     </ScrollView>
-
-
 </LinearLayout>

@@ -100,7 +100,6 @@ public class UploadActivity extends AppCompatActivity {
                 while (!uriTask.isComplete());
                 Uri urlImage = uriTask.getResult();
                 imageURL = urlImage.toString();
-
                 uploadData();
                 dialog.dismiss();
             }
